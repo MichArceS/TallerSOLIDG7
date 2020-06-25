@@ -29,14 +29,12 @@ public class Pastel{
         return precioFinal;
     }
 
-    public ArrayList<Aderezo> getAderezos() {
-        return aderezos;
-    }
 
     @Override
     public String toString() {
         return "Pastel{" + "sabor=" + sabor + ", precioParcial=" + precioParcial + ", aderezos=" + aderezos + '}';
     }
+    
     public String showPrecioFinal(){
         return "Precio Final: $ " + calcularPrecioFinal();
     }

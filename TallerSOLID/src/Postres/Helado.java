@@ -29,10 +29,6 @@ public class Helado{
         return precioFinal;
     }
 
-    public ArrayList<Aderezo> getAderezos() {
-        return aderezos;
-    }
-
     @Override
     public String toString() {
         return "Helado{" + "sabor=" + sabor + ", precioParcial=" + precioParcial + ", aderezos=" + aderezos + '}';

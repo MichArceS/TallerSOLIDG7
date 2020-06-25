@@ -21,8 +21,10 @@ public class Postre{
         return aderezos;
     }
 	
-	@Override
-    public String toString() {
-        return "Helado{" + "sabor=" + sabor + ", precioParcial=" + precioParcial + ", aderezos=" + aderezos + '}';
+    public void anadirAderezoHelado(Aderezo aderezo){
+        aderezos.add(aderezo);
     }
+    
+    public void quitarAderezoHelado(Helado helado,Aderezo aderezo){
+        aderezos.remove(aderezo);
 }
