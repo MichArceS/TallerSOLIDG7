@@ -27,4 +27,9 @@ public class Postre{
     
     public void quitarAderezoHelado(Helado helado,Aderezo aderezo){
         aderezos.remove(aderezo);
+	}
+	
+	public double getPrecioParcial() {
+		return precioParcial;
+	}
 }
