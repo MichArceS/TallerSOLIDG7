@@ -10,6 +10,9 @@ import Adicionales.Frutilla;
 import Postres.*;
 import Procesos.*;
 import Leche.*;
+
+import java.util.ArrayList;
+
 /**
  *
  * @author djurado
@@ -20,26 +23,27 @@ public class Sistema {
          * a ambos agregarles CREMA y FRUTILLAS
          * y cambiar el tipo de leche por Leche Descremada
          * Finalmente mostrar el precio final de cada uno */
+        ArrayList<Postre> arrPostres=new ArrayList<>();
+        LecheEntera lecheDescremada= new LecheDescremada();
+        ManejadorDeLeche mnjLeche= new ManejadorDeLeche();
+        ManejadorPrecios mnjPrecios= new ManejadorPrecios();
+        //Producir Helado
+        Postre heladoVainilla=new Helado("Vainilla");
+        arrPostres.add(heladoVainilla);
 
-        LecheEntera leche = new LecheDeslactosada();
-        ManejadorDeLeche mnj_leche = new ManejadorDeLeche();
-        ManejadorPrecios mnj_precio= new ManejadorPrecios();
-        // Producir Helado
-        Helado helado_vainilla = new Helado("Vainilla");
-        helado_vainilla.anadirAderezo(new Crema());         //Se añade el aderezo Crema
-        helado_vainilla.anadirAderezo(new Frutilla());      //Se añade el aderezo Frutilla
-        System.out.println(helado_vainilla);
-        mnj_leche.cambiarTipoLeche(leche, helado_vainilla); //Se cambia el tipo de leche
-        System.out.println(ManejadorPrecios.showPrecioFinal(helado_vainilla));
+        //Producir Pastel
+        Postre pastelChocolate= new Pastel("Chocolate");
+        arrPostres.add(pastelChocolate);
 
-        // Producir Pastel
-        Pastel pastel_chocolate = new Pastel("Chocolate");
-        pastel_chocolate.anadirAderezo(new Frutilla());     //se añade el aderezo frutilla
-        System.out.println(pastel_chocolate);
-        mnj_leche.cambiarTipoLeche(leche, pastel_chocolate); //se cambia el tipo de leche
-        System.out.println();
-        System.out.println(ManejadorPrecios.showPrecioFinal(pastel_chocolate));
+        //Agregamos aderezos y cambiamos el tipo de leche
+        for(Postre postre: arrPostres){
+            postre.anadirAderezo(new Crema());              //agregamos el aderezo crema
+            postre.anadirAderezo(new Frutilla());           //agregamos el aderezo frutilla
+            System.out.println(postre);                     //imprimimos el postre
+            mnjLeche.cambiarTipoLeche(lecheDescremada,postre);  //cambiamos el tipo de leche del postre
+            System.out.println(mnjPrecios.showPrecioFinal(postre)); //imprimimos el precio del postre
 
-        
+        }
+
     }
 }
