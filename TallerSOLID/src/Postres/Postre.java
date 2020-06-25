@@ -15,17 +15,20 @@ import Adicionales.Aderezo;
 public class Postre{
 	protected String sabor;
     protected double precioParcial;
-    protected ArrayList<Aderezo> aderezos;
-	
+    protected ArrayList<Aderezo> aderezos=new ArrayList<>();
+
 	public ArrayList<Aderezo> getAderezos() {
-        return aderezos;
+
+	    return aderezos;
     }
 	
-    public void anadirAderezoHelado(Aderezo aderezo){
-        aderezos.add(aderezo);
+    public void anadirAderezo(
+            Aderezo aderezo){
+
+	    aderezos.add(aderezo);
     }
     
-    public void quitarAderezoHelado(Helado helado,Aderezo aderezo){
+    public void quitarAderezo(Aderezo aderezo){
         aderezos.remove(aderezo);
 	}
 	

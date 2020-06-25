@@ -9,7 +9,7 @@ package Leche;
  *
  * @author Pedro Mendoza
  */
-public class LecheDeslactosada extends LecheEntera {
+public class LecheDeslactosada implements LecheEntera {
     
     @Override
     public void usarHelado() {
