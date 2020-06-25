@@ -8,3 +8,6 @@ En este caso se incumple el principio DIP debido a que la clase operaciones ader
 
 ## Literal 3
 No cumple el principio SRP ya que podriamos crear una clase que se dedique a realizar el calculo del valor de los postres y ademas que los muestre, quitando la repeticion del codigo de helado y pastel.
+
+## Literal 4
+No cumple el principio OCP ya que para poder agregar mas aderezos se debia modificar el codigo; luego del cambio, el proyecto queda extensible para poder agregar mas subclases de aderezos.

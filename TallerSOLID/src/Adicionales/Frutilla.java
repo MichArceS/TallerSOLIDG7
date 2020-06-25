@@ -8,4 +8,5 @@ public class Frutilla extends Aderezo{
     @Override
     public void setNombre(String nomb){
         super.nombre = nomb;
+    }
 }
