@@ -11,3 +11,6 @@ No cumple el principio SRP ya que podriamos crear una clase que se dedique a rea
 
 ## Literal 4
 No cumple el principio OCP ya que para poder agregar mas aderezos se debia modificar el codigo; luego del cambio, el proyecto queda extensible para poder agregar mas subclases de aderezos.
+
+## Literal 5
+No cumple el principio ISP debido a que, primero, la clase lecheEntera puede ser una interfaz y no lo es, lo cual nos ayudaría en los otros tipos de Leche a sólo implementar la interfaz. Por tal razón nos apegamos al principio y la convertimos a interfaz con pocos métodos que es mejor a tener una interfaz con muchos métodos que no serán usados.
